@@ -4,4 +4,6 @@
     <string name="select_department">Age of person</string>
     <string name="add_person">ADD PERSON INFORMATION</string>
     <string name="view_person_information">VIEW INFORMATION</string>
+    <string name="edit">EDIT</string>
+    <string name="delete">DELETE</string>
 </resources>
