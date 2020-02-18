@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">finallabassignment764937</string>
+    <string name="add_a_new_employee">PERSON DETAIL</string>
+    <string name="select_department">Age of person</string>
+    <string name="add_person">ADD PERSON INFORMATION</string>
+    <string name="view_person_information">VIEW INFORMATION</string>
+</resources>
