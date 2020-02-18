@@ -97,13 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-        /*
-        String sql = "INSERT INTO employees(name, department, joiningdate , salary)" +
-                "VALUES (?,?,?,?)";
-        mDataBase.execSQL(sql ,new String[]{name,dept,joiningdate,salary});
-                Toast.makeText(this, "Employee added", Toast.LENGTH_SHORT).show();
 
-         */
 
 
         //new method

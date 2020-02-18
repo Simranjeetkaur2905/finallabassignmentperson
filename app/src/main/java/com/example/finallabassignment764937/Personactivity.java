@@ -21,21 +21,12 @@ public class Personactivity extends AppCompatActivity {
         setContentView(R.layout.activity_personactivity);
 
         listView = findViewById(R.id.lvpersons);
-
         personList = new ArrayList<>();
-
         mDataBase =   new DatabaseHelperPerson(this);
-
+loadPerson();
 
     }
-    private void loadEmployees() {
-        /*
-        String sql = "SELECT * FROM employees";
-
-
-        Cursor cursor = mDataBase.rawQuery(sql, null);
-
-         */
+    private void loadPerson() {
         Cursor cursor = mDataBase.getAllPerson();
         if(cursor.moveToFirst()){
             do {
