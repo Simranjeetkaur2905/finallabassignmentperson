@@ -18,6 +18,8 @@ public class Personactivity extends AppCompatActivity implements SearchView.OnQu
     List<Person> personList;
     ListView listView;
 
+    ArrayList<String> arrayList = new ArrayList<>();
+
 
     SearchView searchView;
 
@@ -32,7 +34,12 @@ public class Personactivity extends AppCompatActivity implements SearchView.OnQu
         mDataBase =   new DatabaseHelperPerson(this);
 
 
-loadPerson();
+        final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, arrayList);
+
+        listView.setAdapter(arrayAdapter);
+
+
+        loadPerson();
 setUpSearchView();
 
     }

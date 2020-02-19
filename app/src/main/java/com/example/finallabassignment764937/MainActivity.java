@@ -82,17 +82,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
         }
         if (last_name.isEmpty()){
-            lastname.setError("salary field is empty");
+            lastname.setError("last field is empty");
             lastname.requestFocus();
             return;
         }
         if (phone_number.isEmpty()){
-            phonenumber.setError("salary field is empty");
+            phonenumber.setError("phone field is empty");
             phonenumber.requestFocus();
             return;
         }
         if (address_person.isEmpty()){
-            address.setError("salary field is empty");
+            address.setError("address field is empty");
             address.requestFocus();
             return;
         }
