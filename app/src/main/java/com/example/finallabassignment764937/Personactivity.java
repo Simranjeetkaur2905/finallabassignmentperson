@@ -4,28 +4,49 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.SearchView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Personactivity extends AppCompatActivity {
+public class Personactivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
     DatabaseHelperPerson mDataBase;
     List<Person> personList;
     ListView listView;
 
+
+    SearchView searchView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personactivity);
+        searchView = findViewById(R.id.searchbar);
 
         listView = findViewById(R.id.lvpersons);
         personList = new ArrayList<>();
         mDataBase =   new DatabaseHelperPerson(this);
+
+
 loadPerson();
+setUpSearchView();
 
     }
+
+
+    private void setUpSearchView(){
+        searchView.setIconifiedByDefault(false);
+        searchView.setOnQueryTextListener((SearchView.OnQueryTextListener) this);
+        searchView.setSubmitButtonEnabled(true);
+        searchView.setQueryHint("Search here");
+    }
+
+
+
     private void loadPerson() {
         Cursor cursor = mDataBase.getAllPerson();
         if(cursor.moveToFirst()){
@@ -47,6 +68,23 @@ loadPerson();
            listView.setAdapter(personAdapter);
 
         }
+    }
+
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        if(TextUtils.isEmpty(newText.toString())){
+            listView.clearTextFilter();
+        }
+        else {
+            listView.setFilterText(newText.toString());
+        }
+        return true;
     }
 }
 

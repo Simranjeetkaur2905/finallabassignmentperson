@@ -27,6 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/edittextfirstname"
+            android:background="#999"
             android:hint="Enter the person first name"
             android:textStyle="italic"
             />
@@ -37,6 +38,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/edittextlastname"
+            android:layout_marginTop="10dp"
+            android:background="#999"
             android:hint="Enter the last name"
             android:textStyle="italic"
 
@@ -47,7 +50,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/edittextphone"
+            android:layout_marginTop="10dp"
             android:inputType="phone"
+            android:background="#999"
             android:hint="Enter the person Phone number"
             android:textStyle="italic"
             />
@@ -58,6 +63,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/edittextaddress"
+            android:layout_marginTop="10dp"
+            android:background="#999"
             android:hint="Enter the person' address"
             android:textStyle="italic"/>
 
@@ -65,6 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnaddperson"
+            android:layout_marginTop="10dp"
             android:background="@color/colorPrimary"
             android:text="@string/add_person"/>
 
@@ -73,6 +81,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvviewperson"
             android:padding="16dp"
+            android:layout_marginTop="20dp"
             android:background="@color/colorPrimary"
             android:text="@string/view_person_information"
             android:textAlignment="center"
